@@ -19,12 +19,10 @@
 		03E7C8EC18D8EB5500508841 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03E7C8EA18D8EB5500508841 /* InfoPlist.strings */; };
 		03E7C8EE18D8EB5500508841 /* TBMInspector_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E7C8ED18D8EB5500508841 /* TBMInspector_ExampleTests.m */; };
 		03E7C90518D8ECE200508841 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 03E7C90218D8ECE200508841 /* LICENSE */; };
-		03E7C90718D8ECE200508841 /* TBInspectorView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 03E7C90418D8ECE200508841 /* TBInspectorView.podspec */; };
 		03E7C91B18D8F43600508841 /* TBMDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E7C91518D8F43600508841 /* TBMDetailView.m */; };
 		03E7C91C18D8F43600508841 /* TBMInspectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E7C91718D8F43600508841 /* TBMInspectorView.m */; };
 		03E7C91D18D8F43600508841 /* TBMShowHideButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E7C91A18D8F43600508841 /* TBMShowHideButton.m */; };
 		03E7C91F18D8F49A00508841 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 03E7C91E18D8F49A00508841 /* Podfile */; };
-		03E7C92118D8F4A300508841 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 03E7C92018D8F4A300508841 /* README.markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +56,6 @@
 		03E7C8EB18D8EB5500508841 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03E7C8ED18D8EB5500508841 /* TBMInspector_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBMInspector_ExampleTests.m; sourceTree = "<group>"; };
 		03E7C90218D8ECE200508841 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		03E7C90418D8ECE200508841 /* TBInspectorView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TBInspectorView.podspec; path = ../TBInspectorView.podspec; sourceTree = "<group>"; };
 		03E7C91418D8F43600508841 /* TBMDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMDetailView.h; sourceTree = "<group>"; };
 		03E7C91518D8F43600508841 /* TBMDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMDetailView.m; sourceTree = "<group>"; };
 		03E7C91618D8F43600508841 /* TBMInspectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMInspectorView.h; sourceTree = "<group>"; };
@@ -67,7 +64,6 @@
 		03E7C91918D8F43600508841 /* TBMShowHideButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMShowHideButton.h; sourceTree = "<group>"; };
 		03E7C91A18D8F43600508841 /* TBMShowHideButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMShowHideButton.m; sourceTree = "<group>"; };
 		03E7C91E18D8F49A00508841 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
-		03E7C92018D8F4A300508841 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +90,8 @@
 		03E7C8B718D8EB5500508841 = {
 			isa = PBXGroup;
 			children = (
-				03E7C92018D8F4A300508841 /* README.markdown */,
 				03E7C91318D8F43600508841 /* Classes */,
 				03E7C90218D8ECE200508841 /* LICENSE */,
-				03E7C90418D8ECE200508841 /* TBInspectorView.podspec */,
 				03E7C8C918D8EB5500508841 /* TBMInspector Example */,
 				03E7C8E718D8EB5500508841 /* TBMInspector ExampleTests */,
 				03E7C8C218D8EB5500508841 /* Frameworks */,
@@ -272,9 +266,7 @@
 				03E7C8DC18D8EB5500508841 /* Images.xcassets in Resources */,
 				03E7C8D418D8EB5500508841 /* Credits.rtf in Resources */,
 				03E7C8DA18D8EB5500508841 /* MainMenu.xib in Resources */,
-				03E7C90718D8ECE200508841 /* TBInspectorView.podspec in Resources */,
 				03E7C91F18D8F49A00508841 /* Podfile in Resources */,
-				03E7C92118D8F4A300508841 /* README.markdown in Resources */,
 				03E7C90518D8ECE200508841 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
