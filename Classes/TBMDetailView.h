@@ -10,7 +10,6 @@
 
 @interface TBMDetailView : NSView
 
-@property (assign, nonatomic) NSString *labelString;
 @property (retain, readonly) NSView *detailView;
 @property BOOL collapsed;
 @property (retain) id representingObject;

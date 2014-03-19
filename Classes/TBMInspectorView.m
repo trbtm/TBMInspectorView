@@ -70,10 +70,10 @@ NSString *TBMInspectorViewDetailViewDidCollapseNotification = @"TBMInspectorView
 
 - (void)dealloc {
     
-    [super dealloc];
-    
     //Unregister the delegate
     self.delegate = nil;
+    
+    [super dealloc];
 }
 
 - (BOOL)isFlipped {

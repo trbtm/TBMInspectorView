@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CDF2E251-7AB3-4A62-99C1-8CF425448583</string>
+	<string>CDB7106C-079F-406F-A7FC-D063BB7428B8</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TBMInspector Example</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F4F143C3-B185-486D-9A48-CF8C7C5BCB5C</key>
-		<string>https://github.com/trbtm/TBMInspectorView.git</string>
+		<key>12255955-F379-4218-B7DA-48EFB3DACC08</key>
+		<string>https://github.com/trbtm/TBMInspectorView</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Example/TBMInspector Example.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F4F143C3-B185-486D-9A48-CF8C7C5BCB5C</key>
+		<key>12255955-F379-4218-B7DA-48EFB3DACC08</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/trbtm/TBMInspectorView.git</string>
+	<string>https://github.com/trbtm/TBMInspectorView</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F4F143C3-B185-486D-9A48-CF8C7C5BCB5C</string>
+	<string>12255955-F379-4218-B7DA-48EFB3DACC08</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F4F143C3-B185-486D-9A48-CF8C7C5BCB5C</string>
+			<string>12255955-F379-4218-B7DA-48EFB3DACC08</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TBMInspectorView</string>
 		</dict>

@@ -19,6 +19,7 @@ CGFloat const TBDetailViewBarHeight = 19.0;
     NSTrackingArea *_trackingArea;
 }
 
+@property (retain, readwrite) NSView *detailView;
 @property (unsafe_unretained) NSTextField *label;
 @property (unsafe_unretained) NSButton *showHideButton;
 
@@ -28,24 +29,6 @@ CGFloat const TBDetailViewBarHeight = 19.0;
 @end
 
 @implementation TBMDetailView
-
-- (NSString *)labelString {
-    return self.label.stringValue;
-}
-
-- (void)setLabelString:(NSString *)labelString {
-    
-    NSAttributedString *oldString = self.label.attributedStringValue;
-    NSRange rangeOfOldString = NSMakeRange(0, oldString.length);
-    
-    //Create a new string with the attributes of the old string
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:labelString
-                                                                           attributes:[oldString attributesAtIndex:0 effectiveRange:&rangeOfOldString]];
-    
-    self.label.attributedStringValue = attributedString;
-    
-    [attributedString release];
-}
 
 #pragma mark -
 #pragma mark init
@@ -68,7 +51,7 @@ CGFloat const TBDetailViewBarHeight = 19.0;
         self.autoresizingMask = (NSViewWidthSizable);
         
         //Create the label for the bar
-        NSTextField *label = [NSTextField new];
+        NSTextField *label = [[NSTextField alloc] init];
         [label.cell setControlSize:NSSmallControlSize];
         [label setBezeled:NO];
         [label setEditable:NO];
@@ -90,11 +73,11 @@ CGFloat const TBDetailViewBarHeight = 19.0;
         
         [self addSubview:label];
         
-        _label = label;
+        self.label = label;
         [label release];
         
         //Create the show/hide button for the bar
-        NSButton *showHideButton = [TBMShowHideButton new];
+        NSButton *showHideButton = [[TBMShowHideButton alloc] init];
         showHideButton.autoresizingMask = (NSViewMinYMargin | NSViewMinXMargin);
         [showHideButton.cell setControlSize:NSSmallControlSize];
         showHideButton.bezelStyle = NSRecessedBezelStyle;
@@ -128,7 +111,7 @@ CGFloat const TBDetailViewBarHeight = 19.0;
         //Place the button on the view
         [self addSubview:showHideButton];
         
-        _showHideButton = showHideButton;
+        self.showHideButton = showHideButton;
         [showHideButton release];
         
         //Calculate the origin of the detailView and apply the right width
@@ -142,19 +125,18 @@ CGFloat const TBDetailViewBarHeight = 19.0;
             [self addSubview:detailView];
         }
         
-        _detailView = [detailView retain];
+        self.detailView = detailView;
     }
     return self;
 }
 
 - (void)dealloc {
     
-    [super dealloc];
-    
     [_detailView release];
     [_representingObject release];
-    _label = nil;
-    _showHideButton = nil;
+    [_trackingArea release];
+    
+    [super dealloc];
 }
 
 #pragma mark -
