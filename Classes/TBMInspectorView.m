@@ -25,7 +25,7 @@ NSString *TBMInspectorViewDetailViewDidCollapseNotification = @"TBMInspectorView
         void(^removeDelegateAsObserverBlock)(SEL sel, NSString *name) = ^void(SEL sel, NSString *name){
             
             if ([_delegate respondsToSelector:sel]) {
-                [[NSNotificationCenter defaultCenter] removeObserver:_delegate name:name object:nil];
+                [[NSNotificationCenter defaultCenter] removeObserver:_delegate name:name object:self];
             }
         };
         
