@@ -14,11 +14,9 @@
 
 CGFloat const TBDetailViewBarHeight = 19.0;
 
-@interface TBMDetailView () {
-    
-    NSTrackingArea *_trackingArea;
-}
+@interface TBMDetailView ()
 
+@property (retain) NSTrackingArea *trackingArea;
 @property (retain, readwrite) NSView *detailView;
 @property (unsafe_unretained) NSTextField *label;
 @property (unsafe_unretained) NSButton *showHideButton;
@@ -132,9 +130,10 @@ CGFloat const TBDetailViewBarHeight = 19.0;
 
 - (void)dealloc {
     
-    [_detailView release];
-    [_representingObject release];
-    [_trackingArea release];
+    //Release properties
+    self.detailView = nil;
+    self.representingObject = nil;
+    self.trackingArea = nil;
     
     [super dealloc];
 }
@@ -219,21 +218,28 @@ CGFloat const TBDetailViewBarHeight = 19.0;
     [super updateTrackingAreas];
     
     //Remove the old tracking area
-    if (_trackingArea) {
-        [self removeTrackingArea:_trackingArea];
-        [_trackingArea release];
-        _trackingArea = nil;
+    if (self.trackingArea) {
+        [self removeTrackingArea:self.trackingArea];
+        self.trackingArea = nil;
     }
     
     //Create a new tracking area for the top bar
-    _trackingArea = [[NSTrackingArea alloc] initWithRect:self.barArea
-                                                 options:(NSTrackingMouseEnteredAndExited | NSTrackingActiveInKeyWindow)
-                                                   owner:self
-                                                userInfo:nil];
-    [self addTrackingArea:_trackingArea];
+    NSTrackingArea *newTrackingArea = [[NSTrackingArea alloc] initWithRect:self.barArea
+                                                                   options:(NSTrackingMouseEnteredAndExited | NSTrackingActiveInKeyWindow)
+                                                                     owner:self
+                                                                  userInfo:nil];
+    [self addTrackingArea:newTrackingArea];
+    
+    self.trackingArea = newTrackingArea;
+    [newTrackingArea release];
 }
 
 - (void)mouseEntered:(NSEvent *)theEvent {
+    
+    //Reset the title of the button to prevent highlighted state from dragged moused
+    //with mouseUp over another view
+    self.showHideButton.attributedTitle = [self attributedStringForButton:NSLocalizedString(@"Show", nil)
+                                                             hightlighted:NO];
     
     //Display the show hide button
     [self.showHideButton setHidden:NO];
@@ -312,7 +318,7 @@ CGFloat const TBDetailViewBarHeight = 19.0;
 - (NSAttributedString *)attributedStringForButton:(NSString *)stringValue
                                      hightlighted:(BOOL)highlighted {
     
-    NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     [paragraph setAlignment:NSRightTextAlignment];
     
     NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:[NSFont boldSystemFontOfSize:10.0], NSFontAttributeName,
