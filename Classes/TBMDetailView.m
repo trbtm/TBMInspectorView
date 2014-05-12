@@ -190,6 +190,7 @@ CGFloat const TBDetailViewBarHeight = 19.0;
     self.frame = expanedRect;
     //Position the detailof the at the bottom left
     detailViewFrame.origin = NSZeroPoint;
+    detailViewFrame.size.width = NSWidth(self.frame);
     self.detailView.frame = detailViewFrame;
     
     [self addSubview:self.detailView];
