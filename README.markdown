@@ -1,4 +1,4 @@
-# TBMInspectView
+# TBMInspectorView
 
 ![Alternativtext](Screenshot.png "")
 
