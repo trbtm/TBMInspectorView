@@ -91,10 +91,10 @@ CGFloat const TBDetailViewBarHeight = 19.0;
         [showHideButton sizeToFit];
         CGFloat maxWidth = NSWidth(showHideButton.frame);
         
-        showHideButton.attributedStringValue = [self attributedStringForButton:hideLabel hightlighted:NO];
+        showHideButton.attributedTitle = [self attributedStringForButton:hideLabel hightlighted:NO];
         [showHideButton sizeToFit];
         CGFloat secondWidth = NSWidth(showHideButton.frame);
-        maxWidth = secondWidth > maxWidth ? secondWidth : maxWidth;
+        maxWidth = MAX(secondWidth, maxWidth);
         
         //Set the frame of the button
         NSRect buttonFrame = showHideButton.frame;
@@ -104,7 +104,7 @@ CGFloat const TBDetailViewBarHeight = 19.0;
         showHideButton.frame = buttonFrame;
         
         //Set the attributed string
-        showHideButton.attributedStringValue = [self attributedStringForButton:expanded ? hideLabel : showLabel hightlighted:NO];
+        showHideButton.attributedTitle = [self attributedStringForButton:expanded ? hideLabel : showLabel hightlighted:NO];
         
         //Place the button on the view
         [self addSubview:showHideButton];
@@ -239,7 +239,7 @@ CGFloat const TBDetailViewBarHeight = 19.0;
     
     //Reset the title of the button to prevent highlighted state from dragged moused
     //with mouseUp over another view
-    self.showHideButton.attributedTitle = [self attributedStringForButton:NSLocalizedString(@"Show", nil)
+    self.showHideButton.attributedTitle = [self attributedStringForButton:self.showHideButton.attributedTitle.string
                                                              hightlighted:NO];
     
     //Display the show hide button
