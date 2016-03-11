@@ -2,10 +2,10 @@
 
 ![Alternativtext](Screenshot.png "")
 
-TBMInspectorView is a copy of the Xcode 5's inspector view. It is pretty easy to setup and should be set as the documentView of a NSScrollView.
+TBMInspectorView is a copy of the Xcode 5's inspector view. It is pretty easy to setup and should used as the documentView of a NSScrollView.
 
 ## Adding to your Project
-If your are using [Cocoapods](http://cocoapods.org/) simply add the following to your Podfile
+If your are using [CocoaPods](http://cocoapods.org/) simply add the following to your Podfile
 
 ``` ruby
 pod 'TBMInspectorView'
@@ -26,7 +26,7 @@ Code from the example project for setting up the inspector view:
 ```
 
 ## Deployment
-Supports 10.6+, no Autolayout
+Supports 10.6+, not tested in Autolayout environment yet
 
 ## License
 MIT
