@@ -5,7 +5,7 @@
 TBMInspectorView is a copy of the Xcode 5's inspector view. It is pretty easy to setup and should used as the documentView of a NSScrollView.
 
 ## Adding to your Project
-If your are using [CocoaPods](http://cocoapods.org/) simply add the following to your Podfile
+If you're using [CocoaPods](http://cocoapods.org/) simply add the following line to your Podfile
 
 ``` ruby
 pod 'TBMInspectorView'
